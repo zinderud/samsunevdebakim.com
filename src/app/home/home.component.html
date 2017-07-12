@@ -1,0 +1,34 @@
+<rb-banner></rb-banner>
+
+<!-- Main -->
+<div id="home">
+
+  <!-- One -->
+  <section id="one" class="tiles">
+    <article *ngFor="let route of homeRoutes; let i = index;" [style.background-image]="'url(../../assets/images/pic0' + (((i + random) % 6) + 1) + '.jpg)'">
+      <header class="major">
+        <h3><a [routerLink]="['/'.concat(route.path)]" class="link">{{route.data.label}}</a></h3>
+        <p>{{route.data.icerik}}</p>
+          <ul class="actions">
+        <li><a [routerLink]="['/'.concat(route.path)]" class="button next">Devamı</a></li>
+      </ul>
+      </header>
+    </article>
+  </section>
+
+  <!-- Two -->
+  <section id="two">
+    <div class="inner">
+      <header class="major">
+        <h2> Samsun Evde Bakım Hizmetlerinin Amacı</h2>
+      </header>
+      	<p>Samsun Evde bakım hizmetleri;tanı koymaktan ziyade tanı konmuş hastaların tedavisinin takibi, uygulanması ve yetkin refakat ve bakım personeli ile hastalığın getirdiği ve getirebileceği olası riskler ve kısıtlılıklar düşünülerek, ilgili düzenlemelerin yapılmasıyla, eğitimli ve deneyimli sağlık ekibinin tıbbi süreçlere ek olarak; hastanın fizyolojik, psikolojik ve sosyolojik değerlerini gözeterek yaptığı planlamayla, en uygun maliyet hesabı dahilinde sunulan profesyonel bir sağlık hizmetidir..</p>
+          <ul class="actions">
+        <li><a [routerLink]="['/Amacimiz']" class="button next">Devamı</a></li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<rb-contact></rb-contact>
