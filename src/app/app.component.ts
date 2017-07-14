@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'rb-root',
   template: `
+  <kg-notification></kg-notification>
 <!-- Wrapper -->
 <div id="wrapper">
  

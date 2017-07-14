@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   <a [routerLink]="['/']" class="logo"><strong>Samsun</strong> <span>EvdeBakım</span></a>
 
   <nav>
-      <a href="#" class="icon alt fa-phone"><span class="label">Telefon</span> 0532-000-00-00</a> 
+      <a href="#" class="icon alt fa-phone"><span class="label">Telefon</span> 0532-6124755</a> 
  
     <a href="#menu">Menu</a>
   </nav>

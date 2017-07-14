@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // TODO Must Remove
 
- 
+ import { NotificationModule } from './core/notification/notification.module';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -45,7 +46,7 @@ import { TanismaComponent } from './pages/tanisma/tanisma.component';
    
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule,
- 
+ NotificationModule,
     AppBackendModule, AppRouterModule, CoreModule, HomeModule],
   providers: [
    

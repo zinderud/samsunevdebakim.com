@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Routes } from "@angular/router";
+import { Meta, Title,  } from '@angular/platform-browser';
 
 @Component({
   selector: "rb-home",
@@ -7,6 +8,7 @@ import { Routes } from "@angular/router";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
+    public title: String = 'samsun evde bakım  hizmetleri';
   public homeRoutes: Routes = [
     {
       path: "Hizmetlerimiz",
@@ -43,7 +45,17 @@ export class HomeComponent implements OnInit {
   ];
   random: number;
 
-  constructor() {}
+  constructor(meta: Meta, title: Title) {
+        title.setTitle('samsun evde bakım ');
+
+    meta.addTags([
+      { name: 'author',   content: 'zinderud'},
+      { name: 'keywords', content: 'samsun Evde bakım,Samsun Hasta bakım, yara bakım'},
+      { name: 'description ', content: 'samsun evde bakım hizmetleri  Hastanede refakat hizmeti Dekübit ,cerrahi yaralar gibi pansuman ihtiyaçlarinin sağlanmasi, Sonda takma işlemi ve bakımı Kolonostomi bakımı Bası ülseri ( Yatak yarası ) oluşmaması için önleyici uzman hemşire ziyareti, hasta/aile eğitimi Evde enjeksiyon uygulaması , Reçetesi olan ev hastalarında planlanır , serum hazirlama ve uygulama ıv ilaç ugulamalari , Hasta ve yaşlılarımızın ihtiyaçları doğrultusunda her türlü bakım ve sağlık desteği verilmektedir ' }
+    ]);
+
+ 
+  }
 
   ngOnInit() {
     this.random = this.getRandomInt(1, 5);

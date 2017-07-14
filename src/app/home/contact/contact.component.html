@@ -1,18 +1,18 @@
 <section id="contact">
   <div class="inner">
     <section class="message">
-      <form method="post" action="#">
+      <form  [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
         <div class="field half first">
           <label for="name">İsim</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name"  placeholder="İsim" [formControl]="complexForm.controls['name']" required/>
         </div>
         <div class="field half">
           <label for="email">Email</label>
-          <input type="text" name="email" id="email" />
+          <input type="text" name="email" id="email" placeholder="Email" [formControl]="complexForm.controls['email']" required />
         </div>
         <div class="field">
           <label for="message">Mesaj</label>
-          <textarea name="message" id="message" rows="6"></textarea>
+          <textarea name="message" id="message" rows="6" placeholder="Mesaj" [formControl]="complexForm.controls['message']" required>></textarea>
         </div>
         <ul class="actions">
           <li><input type="submit" value="Mesajı Gönder" class="special" /></li>
@@ -32,7 +32,7 @@
         <div class="contact-method">
           <span class="icon alt fa-phone"></span>
           <h3>telefon</h3>
-          <span>(0532) 000-0000</span>
+          <span>0532-6124755</span>
         </div>
       </section>
       <section>
